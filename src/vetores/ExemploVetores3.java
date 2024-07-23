@@ -78,6 +78,6 @@ public class ExemploVetores3 {
 				JOptionPane.showMessageDialog(null,"Opção Inválida!");
 				break;
 			}
-		}while (op == 9);
+		}while (op != 9);
 	}
 }
