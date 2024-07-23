@@ -1,4 +1,4 @@
-package pacote_desafio;
+package desafios_primeira_semana;
 
 import javax.swing.JOptionPane;
 

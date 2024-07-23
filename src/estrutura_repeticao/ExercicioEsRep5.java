@@ -1,5 +1,7 @@
 package estrutura_repeticao;
 
+import javax.swing.JOptionPane;
+
 public class ExercicioEsRep5 {
 
 	public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class ExercicioEsRep5 {
 			// Se ímpar:
 			} else { 
 				resultado += i;
-			}
-		}
+			} System.out.println(resultado + " ");
+		} JOptionPane.showMessageDialog(null, "O resultado da expressão é: " + resultado);
 	}
 }
