@@ -29,7 +29,6 @@ public class ExercicioVet4 {
             } catch (NumberFormatException e) {
                 op = -1;
             }
-
             switch (op) {
                 case 1: // Cadastrar Pessoa
                     if (numPessoas < 350) {
