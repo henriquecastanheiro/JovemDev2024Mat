@@ -48,31 +48,12 @@ public class ExercicioMatrizes1 {
 			case 1:
 				if (qtddAlunos < 100) {
 					qtddAlunos = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de alunos: "));
-<<<<<<< HEAD
-					double[] notas = new double[qtddProvas];
-					String[] nomeAlunos = new String[qtddAlunos];
-					double[][] tabela = new double [qtddAlunos][qtddProvas];
-					for (int i = 0; i < tabela.length; i++) {
+					for (int i = 0; i < 100; i++) {
 						nomeAlunos[i] = JOptionPane.showInputDialog("Digite o nome do " + (i + 1) + "ª aluno:");
-						for (int j = 0; j < tabela[i].length; j++)
+						for (int j = 0; j <100; j++)
 							notas[i] = Double.parseDouble(JOptionPane
-								.showInputDialog("Digite a " + "ª nota de " + nomeAlunos[i] + ":"));
-						msg+="\t"+tabela[i];		
-					System.out.println(msg);
+								.showInputDialog("Digite a " +(i+1) +"ª nota de " + nomeAlunos[i] + ":"));
 				}			
-				}
-				break;
-			case 2:
-				for (int i = 0; i < qtddAlunos; i++);
-				
-=======
-					for (int i = 0; i < qtddAlunos; i++) {
-						nomeAlunos[i] = JOptionPane.showInputDialog("Digite o nome do " + (i + 1) + "ª aluno:")
-								.toUpperCase();
-						for (int j = 0; j < qtddProvas; j++)
-							notas[i][j] = Double.parseDouble(JOptionPane
-									.showInputDialog("Digite a " + (j + 1) + "ª nota de " + nomeAlunos[i] + ":"));
-					}
 				}
 				break;
 			case 2:
@@ -95,7 +76,6 @@ public class ExercicioMatrizes1 {
 					listaAlunos += nomeAlunos[i] + " - Média: " + media + " - Situação: " + situacao + "\n";
 				}
 				JOptionPane.showMessageDialog(null, listaAlunos);
->>>>>>> fe03c584ca0760ed570e37c53a7c8faff175fc82
 				break;
 			case 3:
 				String buscarNome = JOptionPane.showInputDialog("Digite o nome do aluno que deseja encontrar: ")
