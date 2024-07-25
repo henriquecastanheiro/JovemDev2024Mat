@@ -34,17 +34,21 @@ public class ExercicioMatrizes1 {
 				+ "5 - Listar Alunos em Recuperação\n"
 				+ "6 - Listar Alunos Reprovados:\n"
 				+ "9 - Sair:\n";
-				
+
 		int qtddProvas = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de provas neste semestre"));
-		int opcao = 0;
 		int qtddAlunos = 0;
+		int opcao = 0;
+
+		String[] nomeAlunos = new String[100];
+		double[][] notas = new double[100][qtddProvas];
+
 		do {
 			opcao = Integer.parseInt(JOptionPane.showInputDialog(menu));
 			switch (opcao) {
 			case 1:
-				String msg ="";
-				if(qtddAlunos <200) {
+				if (qtddAlunos < 100) {
 					qtddAlunos = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de alunos: "));
+<<<<<<< HEAD
 					double[] notas = new double[qtddProvas];
 					String[] nomeAlunos = new String[qtddAlunos];
 					double[][] tabela = new double [qtddAlunos][qtddProvas];
@@ -61,24 +65,113 @@ public class ExercicioMatrizes1 {
 			case 2:
 				for (int i = 0; i < qtddAlunos; i++);
 				
+=======
+					for (int i = 0; i < qtddAlunos; i++) {
+						nomeAlunos[i] = JOptionPane.showInputDialog("Digite o nome do " + (i + 1) + "ª aluno:")
+								.toUpperCase();
+						for (int j = 0; j < qtddProvas; j++)
+							notas[i][j] = Double.parseDouble(JOptionPane
+									.showInputDialog("Digite a " + (j + 1) + "ª nota de " + nomeAlunos[i] + ":"));
+					}
+				}
+				break;
+			case 2:
+
+				String listaAlunos = "Lista de Alunos:\n";
+				for (int i = 0; i < qtddAlunos; i++) {
+					double somaNotas = 0;
+					for (int j = 0; j < qtddProvas; j++) {
+						somaNotas += notas[i][j];
+					}
+					double media = somaNotas / qtddProvas;
+					String situacao;
+					if (media >= 7) {
+						situacao = "aprovado";
+					} else if (media < 3) {
+						situacao = "reprovado";
+					} else {
+						situacao = "recuperacao";
+					}
+					listaAlunos += nomeAlunos[i] + " - Média: " + media + " - Situação: " + situacao + "\n";
+				}
+				JOptionPane.showMessageDialog(null, listaAlunos);
+>>>>>>> fe03c584ca0760ed570e37c53a7c8faff175fc82
 				break;
 			case 3:
-
+				String buscarNome = JOptionPane.showInputDialog("Digite o nome do aluno que deseja encontrar: ")
+						.toUpperCase();
+				for (int i = 0; i < qtddAlunos; i++)
+					if (nomeAlunos[i].equals(buscarNome)) {
+						double somaNotas = 0;
+						for (int j = 0; j < qtddProvas; j++) {
+							somaNotas += notas[i][j];
+						}
+						double media = somaNotas / qtddProvas;
+						String situacao;
+						if (media >= 7) {
+							situacao = "aprovado";
+						} else if (media < 3) {
+							situacao = "reprovado";
+						} else {
+							situacao = "em recuperacao";
+						}
+						JOptionPane.showMessageDialog(null,
+								nomeAlunos[i] + " - Média: " + media + " - Situação: " + situacao);
+						break;
+					} else {
+						JOptionPane.showMessageDialog(null, " Aluno não encontrado!");
+					}
 				break;
 			case 4:
-
+				String alunosAprovados = "";
+				for (int i = 0; i < qtddAlunos; i++) {
+					double somaNotas = 0;
+					for (int j = 0; j < qtddProvas; j++) {
+						somaNotas += notas[i][j];
+					}
+					double media = somaNotas / qtddProvas;
+					if (media >= 7) {
+						alunosAprovados += nomeAlunos[i] + " - Média: " + media + "\n";
+					}
+				}
+				if (alunosAprovados.equals("Alunos Aprovados:\n")) {
+					JOptionPane.showMessageDialog(null, "Nenhum aluno aprovado.");
+				}
+				JOptionPane.showMessageDialog(null, alunosAprovados);
 				break;
 			case 5:
-
+				String alunosRecuperacao = "Alunos em Recuperação:\n";
+				for (int i = 0; i < qtddAlunos; i++) {
+					double somaNotas = 0;
+					for (int j = 0; j < qtddProvas; j++) {
+						somaNotas += notas[i][j];
+					}
+					double media = somaNotas / qtddProvas;
+					if (media >= 3 && media < 7) {
+						alunosRecuperacao += nomeAlunos[i] + " - Média: " + media + "\n";
+					}
+				}
+				if (alunosRecuperacao.equals("Alunos em Recuperação:\n")) {
+					alunosRecuperacao = "Nenhum aluno em recuperação.";
+				}
+				JOptionPane.showMessageDialog(null, alunosRecuperacao);
 				break;
 			case 6:
-
-				break;
-			case 7:
-
-				break;
-			case 8:
-
+				String alunosReprovados = "";
+				for (int i = 0; i < qtddAlunos; i++) {
+					double somaNotas = 0;
+					for (int j = 0; j < qtddProvas; j++) {
+						somaNotas += notas[i][j];
+					}
+					double media = somaNotas / qtddProvas;
+					if (media < 3) {
+						alunosReprovados += nomeAlunos[i] + " - Média: " + media + "\n";
+					}
+				}
+				if (alunosReprovados.equals("Alunos Reprovados: \n")) {
+					alunosReprovados = "Nenhum aluno reprovado.";
+				}
+				JOptionPane.showMessageDialog(null, alunosReprovados);
 				break;
 			default:
 				break;
