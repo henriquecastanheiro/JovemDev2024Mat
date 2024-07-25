@@ -55,14 +55,12 @@ public class ExercicioMatrizes1 {
 								.showInputDialog("Digite a " + "ª nota de " + nomeAlunos[i] + ":"));
 						msg+="\t"+tabela[i];		
 					System.out.println(msg);
-				}
-					
+				}			
 				}
 				break;
 			case 2:
 				for (int i = 0; i < qtddAlunos; i++);
 				
-
 				break;
 			case 3:
 
@@ -86,6 +84,5 @@ public class ExercicioMatrizes1 {
 				break;
 			}
 		} while (opcao != 9);
-
 	}
 }
