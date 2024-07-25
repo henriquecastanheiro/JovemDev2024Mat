@@ -1,9 +1,5 @@
 package aula_introducao;
 
-import java.util.Iterator;
-
-import javax.swing.JOptionPane;
-
 public class ExemploMedidaTempo {
 	
 	public static void main(String[] args) {
@@ -15,27 +11,28 @@ public class ExemploMedidaTempo {
 		}
 			
 		}
-		
-		String[] buscas = {"X", " nome 99999", "nome 0"};
-		for (String busca : buscas) {
-
-			String ret ="Não existe";
-			long t1 = System.nanoTime();
-//			for(String s : nomes) {
-//				if(s.equals(busca)) {
-//					ret = "Achei";		
-			}
-		}
-		int pos = 0;
-		do {
-			if(nomes[pos].equals(busca)) {
-				ret = "Achei";
-			}
-			pos++;
-		}while()
-		System.out.println(ret);
-		long t2 = System.nanoTime();
-		
-		System.out.println(t2 - t1);
-	}
 }
+		
+//		String[] buscas = {"X", " nome 99999", "nome 0"};
+//		for (String busca : buscas) {
+//
+//			String ret ="Não existe";
+//			long t1 = System.nanoTime();
+////			for(String s : nomes) {
+////				if(s.equals(busca)) {
+////					ret = "Achei";		
+//			}
+//		}
+////		int pos = 0;
+////		do {
+////			if(nomes[pos].equals(busca)) {
+////				ret = "Achei";
+////			}
+////			pos++;
+////		}while()
+////		System.out.println(ret);
+////		long t2 = System.nanoTime();
+////		
+////		System.out.println(t2 - t1);
+////	}
+//}

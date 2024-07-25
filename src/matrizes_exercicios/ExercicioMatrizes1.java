@@ -48,12 +48,13 @@ public class ExercicioMatrizes1 {
 			case 1:
 				if (qtddAlunos < 100) {
 					qtddAlunos = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de alunos: "));
-					for (int i = 0; i < 100; i++) {
-						nomeAlunos[i] = JOptionPane.showInputDialog("Digite o nome do " + (i + 1) + "ª aluno:");
-						for (int j = 0; j <100; j++)
-							notas[i] = Double.parseDouble(JOptionPane
-								.showInputDialog("Digite a " +(i+1) +"ª nota de " + nomeAlunos[i] + ":"));
-				}			
+					for (int i = 0; i < qtddAlunos; i++) {
+						nomeAlunos[i] = JOptionPane.showInputDialog("Digite o nome do " + (i + 1) + "ª aluno:")
+								.toUpperCase();
+						for (int j = 0; j < qtddProvas; j++)
+							notas[i][j] = Double.parseDouble(JOptionPane
+									.showInputDialog("Digite a " + (j + 1) + "ª nota de " + nomeAlunos[i] + ":"));
+					}
 				}
 				break;
 			case 2:
@@ -157,5 +158,6 @@ public class ExercicioMatrizes1 {
 				break;
 			}
 		} while (opcao != 9);
+
 	}
 }
