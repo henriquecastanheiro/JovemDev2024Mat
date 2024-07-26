@@ -5,14 +5,19 @@ import java.util.Scanner;
 public class Exercicio1 {
 
 	public static void main(String[] args) {
-		
+		/*
+		 * Desenvolver um programa em Java que leia a quantidade de pessoas em um grupo
+		 * e, para cada pessoa, leia seu sexo e altura. O programa deve calcular e
+		 * exibir a maior e a menor altura do grupo, a média de altura dos homens e o
+		 * número total de mulheres.
+		 */
 		Scanner entrada = new Scanner(System.in);
 		int grupo, sexo, qtddMulheres = 0, qtddHomens = 0;
 		double altura, somaHomens = 0, mediaHomens = 0, maior = 0, menor = 0;
-		
+
 		System.out.print("Informe a quantidade de pessoas no grupo: ");
 		grupo = entrada.nextInt();
-		
+
 		for (int i = 0; i < grupo; i++) {
 			System.out.print("Escolha o sexo da pessoa: \n1 - Mulher \n2 - Homem ");
 			sexo = entrada.nextInt();
