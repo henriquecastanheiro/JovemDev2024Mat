@@ -17,32 +17,61 @@ public class ExercicioMetodos {
 			 * O programa deve permitir as seguintes funcionalidades:
 			 * 
 			 * Cadastrar Alunos e Notas: Permitir o cadastro de alunos e suas respectivas
-			 * notas nas provas. Listar Alunos: Exibir uma lista de todos os alunos com seus
+			 * notas nas provas. 
+			 * Listar Alunos: Exibir uma lista de todos os alunos com seus
 			 * nomes, médias das notas e situação (aprovado, reprovado ou em recuperação).
-			 * Buscar Aluno por Nome: Permitir a busca de um aluno pelo nome e exibir sua
-			 * média e situação (aprovado, reprovado ou em recuperação). Listar Alunos
-			 * Aprovados: Mostrar os nomes de todos os alunos aprovados. Listar Alunos em
-			 * Recuperação: Mostrar os nomes de todos os alunos que estão em recuperação.
+			 * Buscar Aluno por Nome: Permitir a busca de um aluno pelo nome e exibir sua 
+			 * média e situação (aprovado, reprovado ou em recuperação). 
+			 * Listar Alunos Aprovados: Mostrar os nomes de todos os alunos aprovados. 
+			 * Listar Alunos em Recuperação: Mostrar os nomes de todos os alunos que estão em recuperação.
 			 * Listar Alunos Reprovados: Mostrar os nomes de todos os alunos reprovados.
 			 * 
-			 * Considere: Aprovado média >=7 Reprovado média <3 Recuperação média entre 3 e
-			 * 7
+			 * Considere: 
+			 * Aprovado média >=7 
+			 * Reprovado média <3 
+			 * Recuperação média entre 3 e7
 			 */
-			String menu = "Menu de Alunos\n\n" 
+		int opcao = 0;
+			ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+			do {
+				switch (key) {
+				case value: {
+					
+					yield type;
+				}
+				default:
+					throw new IllegalArgumentException("Unexpected value: " + key);
+				}
+			}
+			
+}
+		public static int menu() {
+			String m = "Menu de Alunos\n\n" 
 					+ "1 - Cadastrar Alunos e Notas\n" 
 					+ "2 - Listar Alunos\n"
 					+ "3 - Buscar Aluno por Nome\n" 
 					+ "4 - Listar Alunos Aprovados\n" 
 					+ "5 - Listar Alunos em Recuperação\n"
 					+ "6 - Listar Alunos Reprovados:\n"
-					+ "9 - Sair:\n";
-			int qtddProvas = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de prova do semestre: "));
-			int[] notas = new int[qtddProvas];
-					
-		public static void cadastroAlunos(ArrayList<String> alunos) {
-			alunos.add(JOptionPane.showInputDialog("Nome: "));
-				for(int i = 0; i < notas.length)
+					+ "0 - Sair:\n";
+			int op = Integer.parseInt(JOptionPane.showInputDialog(m));
+			// Criar uma validação;
+			if(op < 0 || op >6)
+				return menu();
+			return op;
 		}
-	}
+		public static void cadastraAlunos(ArrayList<Aluno> Alunos) {
+			Aluno x = new Aluno();
+			x.nome = JOptionPane.showInputDialog("Informe o nome do aluno: "  );
+			double nota = 0;
+		do {
+			int cont = 0;
+			nota = Double.parseDouble(JOptionPane.showInputDialog("Digite a " + (cont + 1 ) +"ª nota: \nOu -1 - Para sair"));
+			if nota
+			cont++;
+			}while(nota!= -1);
+		
+		}
+	
 }
 
